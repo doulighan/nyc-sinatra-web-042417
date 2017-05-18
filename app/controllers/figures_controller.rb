@@ -15,8 +15,9 @@ class FiguresController < ApplicationController
     # CREATE OUR NEW TITLE
     @title = params["title"] # has only name key/value
     # CREATE OUR NEW LANDMARK
+    binding.pry
     @landmark = params["landmark"] # has only name key/value
-    figure = Figure.new(params["figure"])
+    figure = Figure.(params["figure"])
     #ASSIGN OUR TITLE/LANDMARK IF NEW
     if figure.save
       redirect to '/figures'
