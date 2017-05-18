@@ -9,8 +9,7 @@
   <h2>Existing Titles</h2>
   <% @titles.each do |title| %>
     <div>
-      <input type="checkbox" id="" name="figure[title_ids][]" value="<%=title.id%>" id="<%=title.id%>"><%=title.name%></input>
-      <label><%= title.name %></label>
+      <input type="checkbox" name="figure[title_ids][]" value="<%=title.id%>" id="title_<%=title.id%>"><%=title.name%></input>
     </div>
   <% end %>
   <!-- NEW TITLES -->
@@ -22,8 +21,8 @@
   <h2>Existing Landmarks</h2>
   <% @landmarks.each do |landmark| %>
     <div>
-      <input type="checkbox" id="" name="figure[landmark_ids][]" value="<%=landmark.id%>" id="<%=landmark.id%>"><%=landmark.name%></input>
-      <label><%= landmark.name %></label>
+      <input type="checkbox" name="figure[landmark_ids][]" value="<%=landmark.id%>" id="landmark_<%=landmark.id%>"><%=landmark.name%></input>
+   
     </div>
   <% end %>
   <!-- NEW LANDMARKS -->

@@ -1,6 +1,11 @@
 <h1>All Figures</h1>
 <% @figures.each do |figure| %>
   <h2><%= figure.name %></h2>
-  <p>Titles: <%= figure.titles %></p>
-  <p>Landmarks: <%= figure.landmarks %></p>
+  <ul>
+  <h4>Titles: <% figure.titles.each do |t| %></h4>
+  <li><%= t.name %></li>
+  <% end %> </ul>
+  <h4>Landmarks: <% figure.landmarks.each do |l| %></h4>
+  <li><%= l.name %></li>
+  <% end %> </ul>
 <% end %>
